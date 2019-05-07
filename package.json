@@ -1,0 +1,55 @@
+{
+    "name": "eslint-prettier-sample",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Koot.js sample project that using custom ESLint & prettier rules",
+    "author": {
+        "name": "diablohu",
+        "email": "diablohudream@gmail.com"
+    },
+    "homepage": "https://github.com/cmux/koot#readme",
+    "license": "none",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cmux/koot.git"
+    },
+    "scripts": {
+        "start": "koot-start",
+        "start:server": "koot-start --no-build",
+        "build": "koot-build",
+        "build:spa": "koot-build --type spa",
+        "dev": "koot-dev",
+        "dev:no-open": "koot-dev --no-open",
+        "dev:spa": "koot-dev --type spa --no-open",
+        "analyze": "koot-analyze",
+        "eslint": "eslint \"src/**/*.+(js|jsx)\"",
+        "eslint-fix": "eslint \"src/**/*.+(js|jsx)\" --fix",
+        "format-code": "prettier --write \"src/**/*.+(js|jsx)\""
+    },
+    "dependencies": {
+        "axios": "0.18.0",
+        "classnames": "2.2.6",
+        "koot": "0.9.0-beta.6"
+    },
+    "devDependencies": {
+        "autoprefixer": "9.5.1",
+        "babel-eslint": "10.0.1",
+        "cssnano": "4.1.10",
+        "eslint": "5.16.0",
+        "eslint-config-prettier": "^4.2.0",
+        "eslint-config-react-app": "^4.0.0",
+        "eslint-plugin-flowtype": "^3.7.0",
+        "eslint-plugin-import": "^2.17.2",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-prettier": "^3.0.1",
+        "eslint-plugin-react": "^7.13.0",
+        "eslint-plugin-react-hooks": "^1.6.0",
+        "jest": "24.8.0",
+        "normalize.css": "8.0.1",
+        "redux-logger": "3.0.6",
+        "svg-url-loader": "2.3.2"
+    },
+    "bugs": {
+        "url": "https://github.com/cmux/koot/issues"
+    }
+}
