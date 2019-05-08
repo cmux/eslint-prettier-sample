@@ -24,6 +24,9 @@ export default PageHOC;
 
 const addCapability = (capabilities = []) => WrappedComponent => {
     class HOC extends React.Component {
+        componentDidMount() {
+            console.log('aaa');
+        }
         render() {
             const props = {
                 ...this.props,
@@ -47,6 +50,9 @@ const addCapability = (capabilities = []) => WrappedComponent => {
                     );
                 })
             };
+            if (capabilities.includes('jump')) {
+                props.jump = true;
+            }
             return <WrappedComponent {...props} />;
         }
     }
@@ -58,22 +64,11 @@ const addCapability = (capabilities = []) => WrappedComponent => {
 class ExampleA extends React.Component {
     render() {
         console.log(this.props);
-        return (
-            <div className={classNames([this.props.className, 'example-a'])}>
-                I can be{' '}
-                {this.props.capabilities.map((capability, index) => (
-                    <React.Fragment key={index}>
-                        <em>{capability}</em>
-                        {index < this.props.capabilities.length - 1 ? `, ` : ''}
-                    </React.Fragment>
-                ))}
-                .
-            </div>
-        );
+        return null;
     }
 }
 
-@addCapability(['fly', ['run', '@10km/h']])
+@addCapability(['fly', ['run', '@10km/h'], 'jump'])
 class ExampleB extends React.Component {
     render() {
         console.log(this.props);
