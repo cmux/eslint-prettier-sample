@@ -7,6 +7,16 @@
     "files.insertFinalNewline": true,
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
     "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "javascript.validate.enable": true,
     "prettier.eslintIntegration": true,
-    "eslint.autoFixOnSave": true
+    "eslint.autoFixOnSave": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
